@@ -1,0 +1,26 @@
+<h3 [hidden]="submitted">Ajouter un employé</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nom</label>
+      <input type="text" class="mt-1 form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Prénom</label>
+      <input type="text" class="mt-1 form-control" id="lastName" required [(ngModel)]="employee.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email</label>
+      <input type="text" class="mt-1 form-control" id="emailId" required [(ngModel)]="employee.emailId" name="emailId">
+    </div>
+
+      <button type="submit" class="mt-1 btn btn-success">Ajouter</button>
+
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Employé ajouté avec succès !</h4>
+</div>

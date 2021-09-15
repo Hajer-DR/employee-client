@@ -1,0 +1,37 @@
+<!-- https://getbootstrap.com/docs/5.1/examples/dashboard/ -->
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="./">
+    <img src="../../assets/img/Icone-RH.png" width="42">
+    Gestion des employés
+  </a>
+</header>
+
+<div class="container-fluid ">
+  <div class="row flex-nowrap navbar-light">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <a routerLink="home" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span class="fs-5 d-none d-sm-inline">Accueil</span>
+        </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li class="nav-item">
+            <a routerLink="add" class="nav-link align-middle px-0">
+              <i class="bi bi-people-fill"></i> <span class="ms-1 d-none d-sm-inline">Ajout d'un employé</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a routerLink="employees" class="nav-link align-middle px-0">
+              <i class="bi bi-people-fill"></i> <span class="ms-1 d-none d-sm-inline">Liste des employés</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+
+      </div>
+    </div>
+    <div class="col py-3">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
