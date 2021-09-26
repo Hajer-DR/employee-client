@@ -12,6 +12,6 @@ RUN npm run build --prod
 
 FROM nginx:1.15.8-alpine
 
-#COPY ./docker/nginx.conf /etc/nginx/nginx.conf
+COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=builder /usr/src/app/dist/employee-client/ /usr/share/nginx/html
