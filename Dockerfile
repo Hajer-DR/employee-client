@@ -1,4 +1,4 @@
-FROM node:12.16.1-alpine As builder
+FROM node:alpine As builder
 
 WORKDIR /usr/src/app
 
@@ -10,8 +10,11 @@ COPY . .
 
 RUN npm run build --prod
 
-FROM nginx:1.15.8-alpine
+FROM nginx:1.21.3
 
-COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=builder /usr/src/app/dist/employee-client/ /usr/share/nginx/html
+
+RUN rm -rf /etc/nginx/conf.d/default.conf
+
+COPY ./docker/nginx.conf /etc/nginx/conf.d
