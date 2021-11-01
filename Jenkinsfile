@@ -2,7 +2,7 @@ pipeline {
   agent any
     
   environment {
-  registry = "narjess6/employees-client"
+  registry = "Hajer-DR/employees-client"
 
   }
     
