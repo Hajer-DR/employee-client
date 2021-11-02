@@ -36,7 +36,7 @@ pipeline {
                     sh 'aws eks --region us-east-2 update-kubeconfig --name my-eks'   
                     sh 'kubectl create namespace preprod --dry-run -o yaml | kubectl apply -f - '
                    // sh 'kubectl delete -f deployment-CLI-POD.yml --namespace=preprod --ignore-not-found=true'
-                    sh 'kubectl apply -f deployment-CLI-All.yml --namespace=preprod'
+                   // sh 'kubectl apply -f deployment-CLI-All.yml --namespace=preprod'
                 }
             }
         }
