@@ -21,7 +21,7 @@ stage('EMPLOYEE-client - Checkout code') {
             steps{
                 script {
                  
-				    git 'https://github.com/Narjesse/employee-client.git'
+				    git 'https://github.com/Hajer-DR/employee-client.git'
                     def appimage = docker.build registry + ":$BUILD_NUMBER"
                     docker.withRegistry( '', registryCredential ) {
                         appimage.push()
