@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: employee-cli
-        image: "katsudoka/employees-client:latest"
+        image: "katsudoka/employees-client:1.0"
         imagePullPolicy: Always
         ports:
         - containerPort: 8089
