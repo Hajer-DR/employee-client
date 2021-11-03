@@ -36,9 +36,9 @@ spec:
   selector:
     app: employeecli
     tier: employee-cli
-  type: NodePort
   ports:
-  - protocol: TCP
+  - protocol: "TCP"
     port: 8089
     targetPort: 8089
+  type: LoadBalancer
   
